@@ -5,6 +5,7 @@
     <file url="file://$PROJECT_DIR$/alphamask/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eurekaserver/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/removebackground/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/render-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/shadowmaker/src/main/java" charset="UTF-8" />
   </component>
 </project>

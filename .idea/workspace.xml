@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="57fd2962-7285-41d9-a9d4-c7cc031b3bf7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="5adfd09a-cc40-4d1f-96b2-5f9896619ec1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/project.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/io/datajek/spring/basics/client/service/ImageProcessingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/io/datajek/spring/basics/client/service/ImageProcessingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +25,7 @@
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 5
 }]]></component>
-  <component name="ProjectId" id="2zv3kcqjZZAbczgsryDPbWcTRgi" />
+  <component name="ProjectId" id="2zv6zIw7tGeezphlrukcGLf08Lh" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,12 +39,10 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.Alphamask.executor": "Run",
-    "Spring Boot.ClientApplication.executor": "Run",
     "Spring Boot.EurekaserverApplication.executor": "Run",
-    "Spring Boot.RemovebackgroundApplication.executor": "Run",
-    "Spring Boot.ShadowmakerApplication.executor": "Run",
+    "Spring Boot.RenderServiceApplication.executor": "Run",
     "git-widget-placeholder": "WIP",
+    "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -67,8 +62,8 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.Alphamask">
-    <configuration name="Alphamask" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+  <component name="RunManager" selected="Spring Boot.RenderServiceApplication">
+    <configuration name="AlphamaskApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="alphamask" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.datajek.spring.basics.alphamask.AlphamaskApplication" />
       <method v="2">
@@ -96,6 +91,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RenderServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="render-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.datajek.spring.basics.renderservice.RenderServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ShadowmakerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="shadowmaker" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.datajek.spring.basics.shadowmaker.ShadowmakerApplication" />
@@ -114,12 +116,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="57fd2962-7285-41d9-a9d4-c7cc031b3bf7" name="Changes" comment="" />
-      <created>1752597863850</created>
+      <changelist id="5adfd09a-cc40-4d1f-96b2-5f9896619ec1" name="Changes" comment="" />
+      <created>1752599460402</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1752597863850</updated>
-      <workItem from="1752597865235" duration="411000" />
+      <updated>1752599460402</updated>
+      <workItem from="1752599461696" duration="2110000" />
     </task>
     <servers />
   </component>

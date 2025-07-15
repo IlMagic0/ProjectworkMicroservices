@@ -11,6 +11,7 @@
         <module name="shadowmaker" />
         <module name="removebackground" />
         <module name="Client" />
+        <module name="render-service" />
       </profile>
     </annotationProcessing>
   </component>
@@ -20,6 +21,7 @@
       <module name="alphamask" options="-parameters" />
       <module name="eurekaserver" options="-parameters" />
       <module name="removebackground" options="-parameters" />
+      <module name="render-service" options="-parameters" />
       <module name="shadowmaker" options="-parameters" />
     </option>
   </component>
