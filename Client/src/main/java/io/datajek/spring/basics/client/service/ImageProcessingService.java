@@ -19,61 +19,54 @@ public class ImageProcessingService {
         this.restTemplate = restTemplate;
     }
 
-    // Helper to convert MultipartFile to ByteArrayResource with filename
-    private ByteArrayResource toByteArrayResource(MultipartFile file) throws IOException {
-        return new ByteArrayResource(file.getBytes()) {
+    private ByteArrayResource toByteArrayResource(byte[] bytes, String filename) {
+        return new ByteArrayResource(bytes) {
             @Override
             public String getFilename() {
-                return file.getOriginalFilename();
+                return filename;
             }
         };
     }
 
     public byte[] processImageThroughPipeline(MultipartFile file) throws IOException {
-        // Step 1: Call removebackground service
-        MultiValueMap<String, Object> removeBody = new LinkedMultiValueMap<>();
-        removeBody.add("file", toByteArrayResource(file));
+        // Step 1: REMOVE BACKGROUND
+        byte[] removedBackground = callService(
+                "http://removebackground/image/process",
+                file.getBytes(),
+                file.getOriginalFilename()
+        );
 
+        // Step 2: ADD SHADOW
+        byte[] shadowedImage = callService(
+                "http://shadow-service/shadow/process",
+                removedBackground,
+                "shadowed.png"
+        );
+
+        // Step 3: EXTRACT ALPHA MASK
+        byte[] alphaMaskImage = callService(
+                "http://alphamask-service/alphamask/generate",
+                shadowedImage,
+                "final.png"
+        );
+
+        return alphaMaskImage;
+    }
+
+    private byte[] callService(String url, byte[] fileBytes, String filename) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.MULTIPART_FORM_DATA);
 
-        HttpEntity<MultiValueMap<String, Object>> removeRequest = new HttpEntity<>(removeBody, headers);
+        MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
+        body.add("file", toByteArrayResource(fileBytes, filename));
 
-        ResponseEntity<byte[]> removeResponse = restTemplate.postForEntity(
-                "http://removebackground/image/process",
-                removeRequest,
-                byte[].class
-        );
+        HttpEntity<MultiValueMap<String, Object>> request = new HttpEntity<>(body, headers);
 
-        if (!removeResponse.getStatusCode().is2xxSuccessful()) {
-            throw new RuntimeException("Remove background failed");
+        ResponseEntity<byte[]> response = restTemplate.postForEntity(url, request, byte[].class);
+        if (!response.getStatusCode().is2xxSuccessful()) {
+            throw new RuntimeException("❌ Failed calling: " + url);
         }
 
-        byte[] removedBackgroundImage = removeResponse.getBody();
-
-        // Step 2: Call shadow service
-        ByteArrayResource processedImageResource = new ByteArrayResource(removedBackgroundImage) {
-            @Override
-            public String getFilename() {
-                return "processed.png";
-            }
-        };
-
-        MultiValueMap<String, Object> shadowBody = new LinkedMultiValueMap<>();
-        shadowBody.add("file", processedImageResource);
-
-        HttpEntity<MultiValueMap<String, Object>> shadowRequest = new HttpEntity<>(shadowBody, headers);
-
-        ResponseEntity<byte[]> shadowResponse = restTemplate.postForEntity(
-                "http://shadow-service/shadow/process",
-                shadowRequest,
-                byte[].class
-        );
-
-        if (!shadowResponse.getStatusCode().is2xxSuccessful()) {
-            throw new RuntimeException("Add shadow failed");
-        }
-
-        return shadowResponse.getBody();
+        return response.getBody();
     }
 }

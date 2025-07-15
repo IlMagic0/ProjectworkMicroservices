@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eurekaserver" />
+        <module name="alphamask" />
         <module name="shadowmaker" />
         <module name="removebackground" />
         <module name="Client" />
@@ -16,6 +17,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Client" options="-parameters" />
+      <module name="alphamask" options="-parameters" />
       <module name="eurekaserver" options="-parameters" />
       <module name="removebackground" options="-parameters" />
       <module name="shadowmaker" options="-parameters" />

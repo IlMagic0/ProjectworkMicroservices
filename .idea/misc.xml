@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/Client/pom.xml" />
+        <option value="$PROJECT_DIR$/alphamask/pom.xml" />
         <option value="$PROJECT_DIR$/shadowmaker/pom.xml" />
         <option value="$PROJECT_DIR$/eurekaserver/pom.xml" />
         <option value="$PROJECT_DIR$/removebackground/pom.xml" />
