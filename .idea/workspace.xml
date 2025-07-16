@@ -5,27 +5,47 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5adfd09a-cc40-4d1f-96b2-5f9896619ec1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/orientation-service/scripts/get_car_orientation.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orientation-service/src/main/java/io/datajek/spring/basics/orientationservice/controllers/OrientationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/orientation-service/src/main/java/io/datajek/spring/basics/orientationservice/controllers/PythonExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/window-service/src/main/java/io/datajek/spring/basics/windowservice/controllers/PythonExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/window-service/src/main/java/io/datajek/spring/basics/windowservice/controllers/WindowController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/render-service/blend/backgroundtest.blend" beforeDir="false" afterPath="$PROJECT_DIR$/render-service/blend/backgroundtest.blend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/render-service/scripts/render_with_mask.py" beforeDir="false" afterPath="$PROJECT_DIR$/render-service/scripts/render_with_mask.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/render-service/src/main/java/io/datajek/spring/basics/renderservice/controllers/BlenderExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/render-service/src/main/java/io/datajek/spring/basics/renderservice/controllers/BlenderExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shadowmaker/scripts/add_shadow.py" beforeDir="false" afterPath="$PROJECT_DIR$/shadowmaker/scripts/add_shadow.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2zv6zIw7tGeezphlrukcGLf08Lh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,6 +61,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "Spring Boot.EurekaserverApplication.executor": "Run",
     "Spring Boot.RenderServiceApplication.executor": "Run",
+    "Spring Boot.ShadowmakerApplication.executor": "Run",
     "git-widget-placeholder": "WIP",
     "ignore.virus.scanning.warn.message": "true",
     "node.js.detected.package.eslint": "true",
@@ -62,7 +83,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.RenderServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ShadowmakerApplication">
     <configuration name="AlphamaskApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="alphamask" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.datajek.spring.basics.alphamask.AlphamaskApplication" />
@@ -80,6 +101,13 @@
     <configuration name="EurekaserverApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="eurekaserver" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.datajek.spring.basics.eurekaserver.EurekaserverApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OrientationServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="orientation-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.datajek.spring.basics.orientationservice.OrientationServiceApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,6 +133,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WindowServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="window-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.datajek.spring.basics.windowservice.WindowServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -122,6 +157,7 @@
       <option name="presentableId" value="Default" />
       <updated>1752599460402</updated>
       <workItem from="1752599461696" duration="2110000" />
+      <workItem from="1752649746513" duration="7598000" />
     </task>
     <servers />
   </component>

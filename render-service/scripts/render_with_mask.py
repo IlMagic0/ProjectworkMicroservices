@@ -33,7 +33,7 @@ bpy.context.object.visible_diffuse = False
 plane = bpy.context.active_object
 plane_height = 2.0
 plane.scale = Vector((aspect * plane_height, plane_height, 1))
-plane.location.z += plane_height / 2
+plane.location.z += plane_height / 3.8
 
 # --------------------------------------------------
 # Build material
@@ -82,7 +82,7 @@ if cam:
 # --------------------------------------------------
 scene = bpy.context.scene
 scene.render.engine = 'CYCLES'
-scene.cycles.samples = 50
+scene.cycles.samples = 10
 scene.render.filepath = output_path
 
 # Try GPU
