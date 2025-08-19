@@ -5,19 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5adfd09a-cc40-4d1f-96b2-5f9896619ec1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/orientation-service/scripts/get_car_orientation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orientation-service/src/main/java/io/datajek/spring/basics/orientationservice/controllers/OrientationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/orientation-service/src/main/java/io/datajek/spring/basics/orientationservice/controllers/PythonExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/window-service/src/main/java/io/datajek/spring/basics/windowservice/controllers/PythonExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/window-service/src/main/java/io/datajek/spring/basics/windowservice/controllers/WindowController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/render-inclined/src/main/java/io/datajek/spring/basics/renderinclined/controllers/BlenderExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/render-inclined/src/main/java/io/datajek/spring/basics/renderinclined/controllers/InclinedController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/window-service/scripts/infer_yolov8.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/java/io/datajek/spring/basics/client/service/ImageProcessingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/io/datajek/spring/basics/client/service/ImageProcessingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orientation-service/scripts/get_car_orientation.py" beforeDir="false" afterPath="$PROJECT_DIR$/orientation-service/scripts/get_car_orientation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orientation-service/src/main/java/io/datajek/spring/basics/orientationservice/controllers/OrientationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/orientation-service/src/main/java/io/datajek/spring/basics/orientationservice/controllers/OrientationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/orientation-service/src/main/java/io/datajek/spring/basics/orientationservice/controllers/PythonExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/orientation-service/src/main/java/io/datajek/spring/basics/orientationservice/controllers/PythonExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/removebackground/scripts/remove_background.py" beforeDir="false" afterPath="$PROJECT_DIR$/removebackground/scripts/remove_background.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/render-service/blend/backgroundtest.blend" beforeDir="false" afterPath="$PROJECT_DIR$/render-service/blend/backgroundtest.blend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/render-service/blend/backgroundtest.blend1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/render-service/scripts/render_with_mask.py" beforeDir="false" afterPath="$PROJECT_DIR$/render-service/scripts/render_with_mask.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/render-service/src/main/java/io/datajek/spring/basics/renderservice/controllers/BlenderExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/render-service/src/main/java/io/datajek/spring/basics/renderservice/controllers/BlenderExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/render-service/src/main/java/io/datajek/spring/basics/renderservice/controllers/RenderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/render-service/src/main/java/io/datajek/spring/basics/renderservice/controllers/RenderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shadowmaker/scripts/add_shadow.py" beforeDir="false" afterPath="$PROJECT_DIR$/shadowmaker/scripts/add_shadow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shadowmaker/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shadowmaker/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/window-service/scripts/best.pt" beforeDir="false" afterPath="$PROJECT_DIR$/window-service/scripts/best.pt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/window-service/scripts/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/window-service/scripts/old_predict.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/window-service/src/main/java/io/datajek/spring/basics/windowservice/controllers/PythonExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/window-service/src/main/java/io/datajek/spring/basics/windowservice/controllers/PythonExecutor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +37,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Python Script" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -59,20 +69,35 @@
     "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.AlphamaskApplication.executor": "Run",
+    "Spring Boot.ClientApplication.executor": "Run",
     "Spring Boot.EurekaserverApplication.executor": "Run",
+    "Spring Boot.OrientationServiceApplication.executor": "Run",
+    "Spring Boot.RemovebackgroundApplication.executor": "Run",
+    "Spring Boot.RenderInclinedApplication.executor": "Run",
     "Spring Boot.RenderServiceApplication.executor": "Run",
     "Spring Boot.ShadowmakerApplication.executor": "Run",
+    "Spring Boot.WindowServiceApplication.executor": "Run",
     "git-widget-placeholder": "WIP",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/NOAHDECASTRO/IdeaProjects/ProjectworkMicroservices",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "run.configurations.included.in.services": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\NOAHDECASTRO\IdeaProjects\ProjectworkMicroservices" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -83,7 +108,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ShadowmakerApplication">
+  <component name="RunManager" selected="Spring Boot.RenderServiceApplication">
     <configuration name="AlphamaskApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="alphamask" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.datajek.spring.basics.alphamask.AlphamaskApplication" />
@@ -115,6 +140,13 @@
     <configuration name="RemovebackgroundApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="removebackground" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.datajek.spring.basics.removebackground.RemovebackgroundApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RenderInclinedApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="render-inclined" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.datajek.spring.basics.renderinclined.RenderInclinedApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,10 +190,33 @@
       <updated>1752599460402</updated>
       <workItem from="1752599461696" duration="2110000" />
       <workItem from="1752649746513" duration="7598000" />
+      <workItem from="1753082133490" duration="424000" />
+      <workItem from="1753167321670" duration="1749000" />
+      <workItem from="1754645509482" duration="1427000" />
+      <workItem from="1754832237853" duration="2039000" />
+      <workItem from="1755023572212" duration="1914000" />
+      <workItem from="1755101687611" duration="3447000" />
+      <workItem from="1755184014279" duration="3833000" />
+      <workItem from="1755273480361" duration="1301000" />
+      <workItem from="1755275016292" duration="52000" />
+      <workItem from="1755532924429" duration="1552000" />
+      <workItem from="1755598932746" duration="7625000" />
+      <workItem from="1755624830705" duration="11587000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

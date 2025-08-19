@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 @Component
 public class BlenderExecutor {
 
-    public boolean render(String colorPath, String maskPath, String outputPath) {
+    public boolean render(String colorPath, String maskPath, String windowMaskPath, String outputPath) {
         try {
             String blend = Paths.get("render-service/blend", "backgroundtest.blend").toString();
             String script = Paths.get("render-service/scripts", "render_with_mask.py").toString();
@@ -21,7 +21,7 @@ public class BlenderExecutor {
                     blenderPath,
                     "-b", blend,
                     "-P", script,
-                    "--", colorPath, maskPath, outputPath
+                    "--", colorPath, maskPath, windowMaskPath, outputPath
             );
             pb.redirectErrorStream(true);
 

@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/removebackground/pom.xml" />
         <option value="$PROJECT_DIR$/window-service/pom.xml" />
         <option value="$PROJECT_DIR$/orientation-service/pom.xml" />
+        <option value="$PROJECT_DIR$/render-inclined/pom.xml" />
       </list>
     </option>
   </component>
