@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="eurekaserver" />
+        <module name="render-inclined" />
         <module name="alphamask" />
         <module name="shadowmaker" />
         <module name="render-service" />
@@ -24,6 +25,7 @@
       <module name="eurekaserver" options="-parameters" />
       <module name="orientation-service" options="-parameters" />
       <module name="removebackground" options="-parameters" />
+      <module name="render-inclined" options="-parameters" />
       <module name="render-service" options="-parameters" />
       <module name="shadowmaker" options="-parameters" />
       <module name="window-service" options="-parameters" />

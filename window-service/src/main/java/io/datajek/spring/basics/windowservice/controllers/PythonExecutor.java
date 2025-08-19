@@ -11,9 +11,16 @@ public class PythonExecutor {
 
     public boolean runScript(String inputPath, String outputPath) {
         try {
-            String script = Paths.get("scripts", "infer_yolov8.py").toString();
+            String script = Paths.get("window-service/scripts", "infer_yolov8.py").toString();
+            String pycharmPython = "C:/Users/NOAHDECASTRO/Desktop/image-segmentation-yolov8-main/.venv/Scripts/python.exe";
+
+            // This ^ path here is because my python.exe DOES NOT LIKE THE YOLO STUFF
+            // and I have to use the one from PyCharm, which is in a virtual environment, that already works (technically) with
+            // the previous original scripts
+            // I hope.
+
             ProcessBuilder pb = new ProcessBuilder(
-                    "python",
+                    pycharmPython,
                     script,
                     inputPath,
                     outputPath

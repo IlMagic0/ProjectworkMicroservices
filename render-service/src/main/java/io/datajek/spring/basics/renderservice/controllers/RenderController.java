@@ -1,6 +1,5 @@
 package io.datajek.spring.basics.renderservice.controllers;
 
-import io.datajek.spring.basics.renderservice.controllers.BlenderExecutor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
@@ -24,19 +23,26 @@ public class RenderController {
     @PostMapping(value = "/image", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity<byte[]> renderImage(
             @RequestParam("image") MultipartFile image,
-            @RequestParam("mask")  MultipartFile mask) throws IOException {
+            @RequestParam("mask") MultipartFile mask,
+            @RequestParam("windowMask") MultipartFile windowMask) throws IOException {
 
+        // Save temp files
         File colorTmp = File.createTempFile("color-", ".png");
         image.transferTo(colorTmp);
 
-        File maskTmp  = File.createTempFile("mask-",  ".png");
+        File maskTmp = File.createTempFile("mask-", ".png");
         mask.transferTo(maskTmp);
+
+        File windowMaskTmp = File.createTempFile("windowMask-", ".png");
+        windowMask.transferTo(windowMaskTmp);
 
         File outputTmp = File.createTempFile("render-", ".png");
 
+        // Call BlenderExecutor with 4 args now
         boolean ok = blenderExecutor.render(
                 colorTmp.getAbsolutePath(),
-                maskTmp .getAbsolutePath(),
+                maskTmp.getAbsolutePath(),
+                windowMaskTmp.getAbsolutePath(),
                 outputTmp.getAbsolutePath()
         );
 
