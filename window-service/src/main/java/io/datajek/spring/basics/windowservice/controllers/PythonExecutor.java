@@ -12,15 +12,18 @@ public class PythonExecutor {
     public boolean runScript(String inputPath, String outputPath) {
         try {
             String script = Paths.get("window-service/scripts", "infer_yolov8.py").toString();
-            String pycharmPython = "C:/Users/NOAHDECASTRO/Desktop/image-segmentation-yolov8-main/.venv/Scripts/python.exe";
-
+            // String pycharmPython = "C:/Users/NOAHDECASTRO/Desktop/image-segmentation-yolov8-main/.venv/Scripts/python.exe";
             // This ^ path here is because my python.exe DOES NOT LIKE THE YOLO STUFF
             // and I have to use the one from PyCharm, which is in a virtual environment, that already works (technically) with
             // the previous original scripts
             // I hope.
+            //
+            // FIXED: just had to change/upgrade Ultralytics to the newest version on my machine. On the pc it was 8.0.0 something
+            // And on Pycharm it was 8.3 or something like that.
+            // Keep in mind for when i use Docker
 
             ProcessBuilder pb = new ProcessBuilder(
-                    pycharmPython,
+                    "python",
                     script,
                     inputPath,
                     outputPath
