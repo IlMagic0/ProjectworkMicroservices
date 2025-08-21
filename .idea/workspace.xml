@@ -5,28 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5adfd09a-cc40-4d1f-96b2-5f9896619ec1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/render-inclined/src/main/java/io/datajek/spring/basics/renderinclined/controllers/BlenderExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/render-inclined/src/main/java/io/datajek/spring/basics/renderinclined/controllers/InclinedController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/window-service/scripts/infer_yolov8.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/java/io/datajek/spring/basics/client/service/ImageProcessingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/io/datajek/spring/basics/client/service/ImageProcessingService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orientation-service/scripts/get_car_orientation.py" beforeDir="false" afterPath="$PROJECT_DIR$/orientation-service/scripts/get_car_orientation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orientation-service/src/main/java/io/datajek/spring/basics/orientationservice/controllers/OrientationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/orientation-service/src/main/java/io/datajek/spring/basics/orientationservice/controllers/OrientationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/orientation-service/src/main/java/io/datajek/spring/basics/orientationservice/controllers/PythonExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/orientation-service/src/main/java/io/datajek/spring/basics/orientationservice/controllers/PythonExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/removebackground/scripts/remove_background.py" beforeDir="false" afterPath="$PROJECT_DIR$/removebackground/scripts/remove_background.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render-service/blend/backgroundtest.blend" beforeDir="false" afterPath="$PROJECT_DIR$/render-service/blend/backgroundtest.blend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render-service/blend/backgroundtest.blend1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/render-service/scripts/render_with_mask.py" beforeDir="false" afterPath="$PROJECT_DIR$/render-service/scripts/render_with_mask.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render-service/src/main/java/io/datajek/spring/basics/renderservice/controllers/BlenderExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/render-service/src/main/java/io/datajek/spring/basics/renderservice/controllers/BlenderExecutor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render-service/src/main/java/io/datajek/spring/basics/renderservice/controllers/RenderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/render-service/src/main/java/io/datajek/spring/basics/renderservice/controllers/RenderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shadowmaker/scripts/add_shadow.py" beforeDir="false" afterPath="$PROJECT_DIR$/shadowmaker/scripts/add_shadow.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shadowmaker/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/shadowmaker/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/window-service/scripts/best.pt" beforeDir="false" afterPath="$PROJECT_DIR$/window-service/scripts/best.pt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/window-service/scripts/predict.py" beforeDir="false" afterPath="$PROJECT_DIR$/window-service/scripts/old_predict.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/window-service/src/main/java/io/datajek/spring/basics/windowservice/controllers/PythonExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/window-service/src/main/java/io/datajek/spring/basics/windowservice/controllers/PythonExecutor.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -60,39 +39,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "Spring Boot.AlphamaskApplication.executor": "Run",
-    "Spring Boot.ClientApplication.executor": "Run",
-    "Spring Boot.EurekaserverApplication.executor": "Run",
-    "Spring Boot.OrientationServiceApplication.executor": "Run",
-    "Spring Boot.RemovebackgroundApplication.executor": "Run",
-    "Spring Boot.RenderInclinedApplication.executor": "Run",
-    "Spring Boot.RenderServiceApplication.executor": "Run",
-    "Spring Boot.ShadowmakerApplication.executor": "Run",
-    "Spring Boot.WindowServiceApplication.executor": "Run",
-    "git-widget-placeholder": "WIP",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/NOAHDECASTRO/IdeaProjects/ProjectworkMicroservices",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.configurations.included.in.services": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AlphamaskApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ClientApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EurekaserverApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.OrientationServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RemovebackgroundApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RenderInclinedApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RenderServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ShadowmakerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.WindowServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;WIP&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/NOAHDECASTRO/IdeaProjects/ProjectworkMicroservices&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\NOAHDECASTRO\IdeaProjects\ProjectworkMicroservices" />
@@ -108,7 +87,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.RenderServiceApplication">
+  <component name="RunManager" selected="Spring Boot.WindowServiceApplication">
     <configuration name="AlphamaskApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="alphamask" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.datajek.spring.basics.alphamask.AlphamaskApplication" />
@@ -202,6 +181,8 @@
       <workItem from="1755532924429" duration="1552000" />
       <workItem from="1755598932746" duration="7625000" />
       <workItem from="1755624830705" duration="11587000" />
+      <workItem from="1755643143556" duration="411000" />
+      <workItem from="1755771656879" duration="1127000" />
     </task>
     <servers />
   </component>
