@@ -1,7 +1,9 @@
 package io.datajek.spring.basics.client.service;
 
+import io.datajek.spring.basics.client.ByteArrayMultipartFile;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.*;
+import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
@@ -35,6 +37,10 @@ public class ImageProcessingService {
 
     public byte[] processImageThroughPipeline(MultipartFile file) throws IOException {
         log.debug("Starting image processing pipeline for file: {}", file.getOriginalFilename());
+
+        // Step 0
+
+        checkAndUploadToBucket(file, file.getOriginalFilename()); // upload original file to bucket
 
         // Step 1: REMOVE BACKGROUND
         log.debug("Calling remove background service for file: {}", file.getOriginalFilename());
@@ -124,7 +130,50 @@ public class ImageProcessingService {
         }
 
         log.debug("Final render completed for file: {}", file.getOriginalFilename());
+
+
+        // Upload to bucket the render
+        /*
+
+        String originalName = file.getOriginalFilename(); // e.g., car.png
+        String renderName;
+
+        if (originalName != null && originalName.contains(".")) {
+            int dotIndex = originalName.lastIndexOf(".");
+            renderName = originalName.substring(0, dotIndex) + "_rendered" + originalName.substring(dotIndex);
+        } else {
+            renderName = "rendered_file.png";
+        }
+
+        // Upload the rendered file
+        ByteArrayMultipartFile renderedFile = new ByteArrayMultipartFile(finalRender, renderName, "image/png");
+        Map<String, Object> uploadResponse = checkAndUploadToBucket(renderedFile, renderName);
+        System.out.println("Upload response: " + uploadResponse);
+
+        */
+
+
+
+
+        // Check if upload was successful
+        /*
+        boolean uploadSuccess = (boolean) uploadResponse.get("uploadSuccess");
+
+        if (uploadSuccess) {
+            String uploadedFileName = (String) uploadResponse.get("fileName");
+
+            // 4️⃣ Download the same file immediately
+            byte[] downloadedFile = downloadFromBucket(uploadedFileName);
+            System.out.println("Downloaded file size: " + downloadedFile.length);
+
+            // Now you can save it locally or send it elsewhere
+        } else {
+            System.err.println("Upload failed, cannot download");
+        }
+        */
+
         return finalRender;
+
     }
 
 
@@ -187,5 +236,54 @@ public class ImageProcessingService {
 
         return response.getBody();
     }
+
+    // Call the check and upload service
+
+    public Map<String, Object> checkAndUploadToBucket(MultipartFile file, String filename) throws IOException {
+        String url = "http://bucket-service/upload-api";
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+
+        MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
+
+        HttpHeaders fileHeaders = new HttpHeaders();
+        fileHeaders.setContentType(MediaType.parseMediaType(file.getContentType() != null ? file.getContentType() : "image/png"));
+
+        HttpEntity<ByteArrayResource> filePart = new HttpEntity<>(
+                toByteArrayResource(file.getBytes(), filename),  // use custom filename
+                fileHeaders
+        );
+
+        body.add("file", filePart);
+
+        HttpEntity<MultiValueMap<String, Object>> request = new HttpEntity<>(body, headers);
+
+        ResponseEntity<Map> response = restTemplate.postForEntity(url, request, Map.class);
+
+        if (!response.getStatusCode().is2xxSuccessful()) {
+            throw new RuntimeException("Failed calling bucket-service /upload-api");
+        }
+
+        return response.getBody();
+    }
+
+
+
+    /**
+     * Call the bucket-service /download/{fileName} endpoint to download a file as bytes.
+     */
+    public byte[] downloadFromBucket(String fileName) {
+        String url = "http://bucket-service/download/" + fileName; // replace with actual URL
+
+        ResponseEntity<byte[]> response = restTemplate.getForEntity(url, byte[].class);
+
+        if (!response.getStatusCode().is2xxSuccessful()) {
+            throw new RuntimeException("Failed calling bucket-service /download for file: " + fileName);
+        }
+
+        return response.getBody();
+    }
+
 
 }

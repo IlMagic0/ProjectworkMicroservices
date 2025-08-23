@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5adfd09a-cc40-4d1f-96b2-5f9896619ec1" name="Changes" comment="">
+    <list default="true" id="9451f1d8-3b2b-4217-a5d7-bc170e110d52" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/window-service/src/main/java/io/datajek/spring/basics/windowservice/controllers/PythonExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/window-service/src/main/java/io/datajek/spring/basics/windowservice/controllers/PythonExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/java/io/datajek/spring/basics/client/service/ImageProcessingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/io/datajek/spring/basics/client/service/ImageProcessingService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +20,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Class" />
       </list>
     </option>
@@ -29,12 +32,10 @@
   &quot;isMigrated&quot;: true
 }</component>
   <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
 }</component>
-  <component name="ProjectId" id="2zv6zIw7tGeezphlrukcGLf08Lh" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="31gywZGEcWJ5UnyCN48LyPPosEp" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -49,8 +50,10 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;Spring Boot.AlphamaskApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.BucketServiceApp.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.ClientApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.EurekaserverApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ImgUpload.executor&quot;: &quot;Debug&quot;,
     &quot;Spring Boot.OrientationServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.RemovebackgroundApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.RenderInclinedApplication.executor&quot;: &quot;Run&quot;,
@@ -59,7 +62,6 @@
     &quot;Spring Boot.WindowServiceApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;WIP&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/NOAHDECASTRO/IdeaProjects/ProjectworkMicroservices&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -72,11 +74,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\NOAHDECASTRO\IdeaProjects\ProjectworkMicroservices" />
-    </key>
-  </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -87,7 +84,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.WindowServiceApplication">
+  <component name="RunManager" selected="Spring Boot.ClientApplication">
     <configuration name="AlphamaskApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="alphamask" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.datajek.spring.basics.alphamask.AlphamaskApplication" />
@@ -95,7 +92,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="BucketServiceApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="imageuploadproject" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.ImgUpload" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Client" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="io.datajek.spring.basics.client.ClientApplication" />
       <method v="2">
@@ -162,42 +166,19 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5adfd09a-cc40-4d1f-96b2-5f9896619ec1" name="Changes" comment="" />
-      <created>1752599460402</created>
+      <changelist id="9451f1d8-3b2b-4217-a5d7-bc170e110d52" name="Changes" comment="" />
+      <created>1755960251272</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1752599460402</updated>
-      <workItem from="1752599461696" duration="2110000" />
-      <workItem from="1752649746513" duration="7598000" />
-      <workItem from="1753082133490" duration="424000" />
-      <workItem from="1753167321670" duration="1749000" />
-      <workItem from="1754645509482" duration="1427000" />
-      <workItem from="1754832237853" duration="2039000" />
-      <workItem from="1755023572212" duration="1914000" />
-      <workItem from="1755101687611" duration="3447000" />
-      <workItem from="1755184014279" duration="3833000" />
-      <workItem from="1755273480361" duration="1301000" />
-      <workItem from="1755275016292" duration="52000" />
-      <workItem from="1755532924429" duration="1552000" />
-      <workItem from="1755598932746" duration="7625000" />
-      <workItem from="1755624830705" duration="11587000" />
-      <workItem from="1755643143556" duration="411000" />
-      <workItem from="1755771656879" duration="1127000" />
+      <updated>1755960251272</updated>
+      <workItem from="1755960253272" duration="3370000" />
+      <workItem from="1755963800221" duration="3472000" />
+      <workItem from="1755971597931" duration="6644000" />
+      <workItem from="1755980199817" duration="29000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

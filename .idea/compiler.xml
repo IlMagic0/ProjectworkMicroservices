@@ -11,6 +11,7 @@
         <module name="alphamask" />
         <module name="shadowmaker" />
         <module name="render-service" />
+        <module name="imageuploadproject" />
         <module name="orientation-service" />
         <module name="window-service" />
         <module name="removebackground" />
@@ -23,6 +24,7 @@
       <module name="Client" options="-parameters" />
       <module name="alphamask" options="-parameters" />
       <module name="eurekaserver" options="-parameters" />
+      <module name="imageuploadproject" options="-parameters" />
       <module name="orientation-service" options="-parameters" />
       <module name="removebackground" options="-parameters" />
       <module name="render-inclined" options="-parameters" />
