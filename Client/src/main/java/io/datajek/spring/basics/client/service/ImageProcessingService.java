@@ -1,9 +1,7 @@
 package io.datajek.spring.basics.client.service;
 
-import io.datajek.spring.basics.client.ByteArrayMultipartFile;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.http.*;
-import org.springframework.mock.web.MockMultipartFile;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;

@@ -113,6 +113,7 @@ public class Controller {
         );
     }
 
+    /*
     @PostMapping("/upload-rendered")
     @ResponseBody
     public Map<String, Object> uploadRendered(@RequestParam("file") MultipartFile file,
@@ -156,5 +157,7 @@ public class Controller {
                 "meetsCriteria", responseLogic.isMeetsCriteria()
         );
     }
+
+     */
 
 }

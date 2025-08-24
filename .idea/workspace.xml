@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9451f1d8-3b2b-4217-a5d7-bc170e110d52" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/main/java/io/datajek/spring/basics/client/service/BucketService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/src/main/resources/static/upload-bucket.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/java/io/datajek/spring/basics/client/ByteArrayMultipartFile.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/java/io/datajek/spring/basics/client/controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/io/datajek/spring/basics/client/controller/ImageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/src/main/java/io/datajek/spring/basics/client/service/ImageProcessingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/java/io/datajek/spring/basics/client/service/ImageProcessingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Client/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImgUploadAndResponse-v3/src/main/java/org/example/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/ImgUploadAndResponse-v3/src/main/java/org/example/Controller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +22,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -36,44 +39,48 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="31gywZGEcWJ5UnyCN48LyPPosEp" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.AlphamaskApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.BucketServiceApp.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ClientApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.EurekaserverApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ImgUpload.executor&quot;: &quot;Debug&quot;,
-    &quot;Spring Boot.OrientationServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.RemovebackgroundApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.RenderInclinedApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.RenderServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ShadowmakerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.WindowServiceApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;WIP&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.AlphamaskApplication.executor": "Run",
+    "Spring Boot.BucketServiceApp.executor": "Run",
+    "Spring Boot.ClientApplication.executor": "Run",
+    "Spring Boot.EurekaserverApplication.executor": "Run",
+    "Spring Boot.ImgUpload.executor": "Debug",
+    "Spring Boot.OrientationServiceApplication.executor": "Run",
+    "Spring Boot.RemovebackgroundApplication.executor": "Run",
+    "Spring Boot.RenderInclinedApplication.executor": "Run",
+    "Spring Boot.RenderServiceApplication.executor": "Run",
+    "Spring Boot.ShadowmakerApplication.executor": "Run",
+    "Spring Boot.WindowServiceApplication.executor": "Run",
+    "git-widget-placeholder": "WIP",
+    "ignore.virus.scanning.warn.message": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "run.configurations.included.in.services": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
@@ -175,6 +182,7 @@
       <workItem from="1755963800221" duration="3472000" />
       <workItem from="1755971597931" duration="6644000" />
       <workItem from="1755980199817" duration="29000" />
+      <workItem from="1756046456120" duration="1721000" />
     </task>
     <servers />
   </component>

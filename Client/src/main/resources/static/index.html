@@ -2,84 +2,138 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Image Processing Client</title>
+  <title>Image Processing Pipeline</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    .preview, .result { margin-top: 20px; }
-    img { max-width: 300px; display: block; margin-top: 10px; }
-    button { margin-top: 10px; padding: 10px 20px; cursor: pointer; }
-    input[type="file"] { margin-top: 10px; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .preview, .result {
+      margin-top: 20px;
+    }
+    img {
+      max-width: 400px;
+      display: block;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 18px;
+      font-size: 15px;
+      cursor: pointer;
+      border-radius: 6px;
+      border: none;
+      background-color: #1976d2;
+      color: white;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+    .nav-btn {
+      background-color: #555;
+    }
+    .nav-btn:hover {
+      background-color: #333;
+    }
   </style>
 </head>
 <body>
-<h1>Image Processing Client</h1>
+<h1>Image Processing Pipeline</h1>
 
-<label>Select an image to process:</label>
-<input type="file" id="fileInput" accept="image/*">
+<!-- Upload Form -->
+<form id="uploadForm">
+  <input type="file" id="imageInput" name="file" accept="image/*" required>
+  <button type="submit">Process Image</button>
+</form>
 
+<!-- Preview of uploaded image -->
 <div class="preview">
-  <h3>Original Image:</h3>
-  <img id="originalImage" src="#" alt="Original Preview" style="display:none;">
+  <h2>Original Image:</h2>
+  <img id="previewImage" src="" alt="No image uploaded yet">
 </div>
 
-<button id="processBtn">Process Image</button>
-
+<!-- Result after rendering -->
 <div class="result">
-  <h3>Processed Image:</h3>
-  <img id="processedImage" src="#" alt="Processed Preview" style="display:none;">
-  <a id="downloadLink" href="#" download="rendered_image.png" style="display:none;">Download Rendered Image</a>
+  <h2>Rendered Image:</h2>
+  <img id="renderedImage" src="" alt="No rendered image yet">
+  <button id="downloadBtn" style="display:none;">Download Rendered Image</button>
 </div>
+
+<!-- Navigation -->
+<button class="nav-btn" onclick="window.location.href='upload-bucket.html'">Go to Upload Bucket</button>
 
 <script>
-  const fileInput = document.getElementById('fileInput');
-  const originalImage = document.getElementById('originalImage');
-  const processedImage = document.getElementById('processedImage');
-  const downloadLink = document.getElementById('downloadLink');
-  const processBtn = document.getElementById('processBtn');
+  const imageInput = document.getElementById("imageInput");
+  const previewImage = document.getElementById("previewImage");
+  const renderedImage = document.getElementById("renderedImage");
+  const uploadForm = document.getElementById("uploadForm");
+  const downloadBtn = document.getElementById("downloadBtn");
 
-  let selectedFile;
+  let renderedBlob = null;
 
-  fileInput.addEventListener('change', (event) => {
-    selectedFile = event.target.files[0];
-    if (selectedFile) {
+  // Show preview when file is selected
+  imageInput.addEventListener("change", function() {
+    const file = this.files[0];
+    if (file) {
       const reader = new FileReader();
       reader.onload = function(e) {
-        originalImage.src = e.target.result;
-        originalImage.style.display = 'block';
+        previewImage.src = e.target.result;
       };
-      reader.readAsDataURL(selectedFile);
+      reader.readAsDataURL(file);
     }
   });
 
-  processBtn.addEventListener('click', () => {
-    if (!selectedFile) {
-      alert('Please select an image first.');
+  // Handle upload and processing
+  uploadForm.addEventListener("submit", async function(e) {
+    e.preventDefault();
+    const file = imageInput.files[0];
+    if (!file) {
+      alert("Please select a file first.");
       return;
     }
 
     const formData = new FormData();
-    formData.append('file', selectedFile);
+    formData.append("file", file);
 
-    fetch('http://localhost:8080/process-image', {  // Adjust to your Spring Boot endpoint
-      method: 'POST',
-      body: formData
-    })
-            .then(response => {
-              if (!response.ok) throw new Error('Failed to process image');
-              return response.blob();
-            })
-            .then(blob => {
-              const url = URL.createObjectURL(blob);
-              processedImage.src = url;
-              processedImage.style.display = 'block';
+    try {
+      const response = await fetch("/api/process-image", {  // <-- correct endpoint
+        method: "POST",
+        body: formData
+      });
 
-              downloadLink.href = url;
-              downloadLink.style.display = 'inline-block';
-            })
-            .catch(error => {
-              console.error(error);
-              alert('Error processing image');
-            });
+      if (!response.ok) {
+        throw new Error("Image processing failed");
+      }
+
+      const blob = await response.blob();
+      renderedBlob = blob;
+
+      // Display rendered image
+      const imageUrl = URL.createObjectURL(blob);
+      renderedImage.src = imageUrl;
+
+      // Enable download button
+      downloadBtn.style.display = "inline-block";
+    } catch (err) {
+      alert("Error: " + err.message);
+    }
+  });
+
+  // Download rendered image
+  downloadBtn.addEventListener("click", function() {
+    if (renderedBlob) {
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(renderedBlob);
+      link.download = "rendered_image.png";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
   });
 </script>
 </body>

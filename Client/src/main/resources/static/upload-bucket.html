@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload to Bucket</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h1 {
+      color: #333;
+    }
+    .log {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+      border-radius: 6px;
+      max-height: 200px;
+      overflow-y: auto;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 18px;
+      font-size: 15px;
+      cursor: pointer;
+      border-radius: 6px;
+      border: none;
+      background-color: #1976d2;
+      color: white;
+    }
+    button:hover {
+      background-color: #1565c0;
+    }
+    .nav-btn {
+      background-color: #555;
+    }
+    .nav-btn:hover {
+      background-color: #333;
+    }
+    .preview {
+      margin-top: 20px;
+    }
+    .preview img {
+      max-width: 300px;
+      display: none;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+<h1>Upload to Bucket</h1>
+
+<!-- Upload Form -->
+<form id="uploadForm">
+  <input type="file" id="fileInput" name="file" accept=".png,.jpg,.jpeg" required>
+  <button type="submit">Upload</button>
+</form>
+
+<!-- Preview -->
+<div class="preview">
+  <p>Preview:</p>
+  <img id="previewImg" src="" alt="No file selected">
+</div>
+
+<!-- Log output -->
+<div class="log" id="logBox">Waiting for uploads...</div>
+
+<!-- Navigation -->
+<button class="nav-btn" onclick="window.location.href='index.html'">⬅ Back to Index</button>
+
+<script>
+  const uploadForm = document.getElementById("uploadForm");
+  const fileInput = document.getElementById("fileInput");
+  const logBox = document.getElementById("logBox");
+  const previewImg = document.getElementById("previewImg");
+
+  function log(message) {
+    logBox.textContent += "\n" + message;
+    logBox.scrollTop = logBox.scrollHeight;
+  }
+
+  // Show preview when file is selected
+  fileInput.addEventListener("change", function() {
+    const file = fileInput.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        previewImg.src = e.target.result;
+        previewImg.style.display = "block";
+      };
+      reader.readAsDataURL(file);
+    } else {
+      previewImg.src = "";
+      previewImg.style.display = "none";
+    }
+  });
+
+  // Handle upload
+  uploadForm.addEventListener("submit", async function(e) {
+    e.preventDefault();
+    const file = fileInput.files[0];
+    if (!file) {
+      alert("Please select a PNG or JPG file.");
+      return;
+    }
+
+    const formData = new FormData();
+    formData.append("file", file);
+
+    try {
+      log("Uploading " + file.name + " ...");
+      const response = await fetch("/api/upload-to-bucket", {
+        method: "POST",
+        body: formData
+      });
+
+      if (!response.ok) {
+        throw new Error("Upload failed (status " + response.status + ")");
+      }
+
+      const result = await response.json();
+      log("Upload successful:\n" + JSON.stringify(result, null, 2));
+    } catch (err) {
+      log("Error: " + err.message);
+    }
+  });
+</script>
+</body>
+</html>
